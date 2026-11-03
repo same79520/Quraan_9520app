@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أجر دائم ❤️ | القرآن الكريم</title>
+    
+    <!-- تحميل خطوط جوجل -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- تحميل مكتبة Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'amiri': ['Amiri', 'serif'],
+                        'tajawal': ['Tajawal', 'sans-serif'],
+                    },
+                    colors: {
+                        'islamic-dark': '#2c3e50',
+                        'islamic-gold': '#d4af37',
+                        'islamic-green': '#196b46',
+                        'islamic-light': '#fdfbf7',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Tajawal', sans-serif; background-color: #f4f6f5; background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23196b46" fill-opacity="0.03"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); }
+        h1, h2, h3 { font-family: 'Amiri', serif; }
+        
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23196b46' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: left 1rem center;
+            background-size: 1em;
+        }
+        
+        audio {
+            width: 100%;
+            height: 54px;
+            outline: none;
+            border-radius: 9999px;
+            background-color: #fdfbf7;
+        }
+        audio::-webkit-media-controls-panel { background-color: #fdfbf7; }
+        audio::-webkit-media-controls-play-button,
+        audio::-webkit-media-controls-mute-button { background-color: rgba(25, 107, 70, 0.1); border-radius: 50%; }
+
+        /* شريط التمرير للقائمة المنسدلة */
+        .custom-scrollbar::-webkit-scrollbar { width: 8px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 8px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #196b46; border-radius: 8px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #124d32; }
+    </style>
+</head>
+<body class="text-gray-800 antialiased min-h-screen flex flex-col">
+
+    <main class="flex-grow container mx-auto px-4 py-10 flex flex-col items-center justify-center">
+        
+        <div class="bg-white/90 backdrop-blur-sm w-full max-w-3xl rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+            
+            <!-- الرأس الأخضر -->
+            <div class="bg-islamic-green text-white p-8 text-center relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-3 relative z-10">أجر دائم ❤️</h1>
+                <p class="text-emerald-100 text-lg relative z-10">استمع للقرآن الكريم بأصوات مئات القراء</p>
+                
+                <!-- زر تثبيت التطبيق -->
+                <button id="installAppBtn" class="hidden mx-auto mt-4 items-center justify-center gap-2 bg-white text-islamic-green hover:bg-emerald-50 font-bold py-2 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105 z-20 relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    تثبيت التطبيق على الهاتف
+                </button>
+            </div>
+
+            <div class="p-6 md:p-10">
+                
+                <!-- برواز الآية الكريمة والصلاة على النبي ﷺ -->
+                <div class="mb-8 p-6 bg-emerald-50/50 border-2 border-islamic-gold rounded-xl shadow-sm text-center relative">
+                    <h2 class="text-xl md:text-2xl font-bold text-islamic-green mb-4 font-amiri leading-relaxed">
+                        ﴿إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ يَا أَيُّهَا الَّذِينَ آَمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمًا﴾
+                    </h2>
+                    <p class="text-lg md:text-xl text-islamic-dark font-amiri font-semibold">
+                        اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلَى نَبِيْنَا مُحَمَّدٍ ﷺ♥️
+                    </p>
+                </div>
+
+                <!-- منطقة اختيار القارئ والرواية والسورة -->
+                <div class="space-y-6">
+                    
+                    <!-- 1. البحث عن القارئ -->
+                    <div class="relative">
+                        <label for="reciterSearch" class="block text-gray-700 font-bold mb-2 text-lg">ابحث عن القارئ:</label>
+                        <input type="text" id="reciterSearch" autocomplete="off" placeholder="اكتب اسم القارئ هنا للبحث..." class="w-full border border-gray-300 rounded-xl px-4 py-3 bg-white text-gray-700 text-lg focus:outline-none focus:ring-2 focus:ring-islamic-green focus:border-transparent transition">
+                        <!-- القائمة المنسدلة المخصصة -->
+                        <ul id="customDropdown" class="absolute z-50 w-full bg-white border border-gray-200 mt-1 rounded-xl shadow-lg max-h-60 overflow-y-auto hidden custom-scrollbar"></ul>
+                    </div>
+
+                    <!-- 2. اختيار الرواية -->
+                    <div>
+                        <label for="moshafSelect" class="block text-gray-700 font-bold mb-2 text-lg">اختر الرواية / المصحف:</label>
+                        <select id="moshafSelect" disabled class="w-full border border-gray-300 rounded-xl px-4 py-3 bg-gray-50 text-gray-700 text-lg focus:outline-none focus:ring-2 focus:ring-islamic-green focus:border-transparent transition disabled:opacity-60 cursor-not-allowed">
+                            <option value="">أولاً، الرجاء اختيار القارئ من الأعلى</option>
+                        </select>
+                    </div>
+
+                    <!-- 3. اختيار السورة -->
+                    <div>
+                        <label for="surahSelect" class="block text-gray-700 font-bold mb-2 text-lg">اختر السورة:</label>
+                        <select id="surahSelect" disabled class="w-full border border-gray-300 rounded-xl px-4 py-3 bg-gray-50 text-gray-700 text-lg focus:outline-none focus:ring-2 focus:ring-islamic-green focus:border-transparent transition disabled:opacity-60 cursor-not-allowed">
+                            <option value="">أولاً، الرجاء اختيار الرواية</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- قسم البث المباشر للإذاعات -->
+                <div class="mt-8 mb-8 pt-6 border-t border-gray-200">
+                    <h3 class="text-xl font-bold text-islamic-green mb-4 font-amiri text-center">📻 البث المباشر لإذاعات القرآن الكريم</h3>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button id="egyptRadioBtn" type="button" class="flex items-center justify-center gap-2 bg-white border-2 border-islamic-green text-islamic-green hover:bg-islamic-green hover:text-white font-bold py-3 px-6 rounded-xl shadow-sm transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"></circle><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path></svg>
+                            إذاعة القرآن الكريم (مصر)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- مشغل الصوت -->
+                <div class="mt-4 bg-islamic-light p-4 rounded-full shadow-inner border border-gray-100">
+                    <audio id="audioPlayer" controls>
+                        متصفحك لا يدعم مشغل الصوت.
+                    </audio>
+                </div>
+                
+                <div id="statusMessage" class="text-center mt-3 text-islamic-green font-bold min-h-[1.5rem]"></div>
+                
+                <!-- أزرار التحميل -->
+                <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+                    <button id="downloadSurahBtn" type="button" class="hidden items-center justify-center gap-2 bg-islamic-green hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl shadow-md transition-transform transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        تحميل السورة
+                    </button>
+                    
+                    <button id="downloadFullBtn" type="button" class="hidden items-center justify-center gap-2 bg-islamic-gold hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-xl shadow-md transition-transform transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                        تحميل المصحف كاملاً
+                    </button>
+                </div>
+
+                <div class="mt-10 text-center">
+                    <a href="https://t.me/Quraan_9520" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#0088cc] hover:bg-[#0077b5] text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        اشترك في قناة التليجرام: أجر دائم ❤️
+                    </a>
+                </div>
+            </div>
+
+            <!-- الخاتمة -->
+            <div class="bg-emerald-50 p-6 md:p-10 border-t border-emerald-100">
+                <div class="text-center text-islamic-dark text-lg md:text-xl leading-relaxed space-y-4">
+                    <p class="font-bold text-2xl text-islamic-green mb-4">السلام عليكم ورحمة الله وبركاته</p>
+                    <p>أنا شخص مجهول لكم، وقد لا تعرفون اسمي، لكن إن جاء يوم وتوقفت فيه عن النشر، فلا تنسوني من دعوة صادقة بظهر الغيب: <br>
+                    <span class="font-bold">أن يجعل الله ما قُدِّم هنا في ميزان حسناتي وأن تكون هذه القناة وهذا الموقع صدقة جارية لي ولوالداي وللمؤمنين جميعا الاحياء منهم والأموات</span></p>
+                    <p>والله ما سعيت إلا للخير، فإن وُفِّقت، فبفضل الله ❤️</p>
+                    <p>فساعدونا بنشر القناة ولينك الموقع في جروباتكم وحساباتكم الخاصة لكي ينضم إليها الجميع <br>
+                    <span class="text-islamic-gold font-bold">واعلموا :</span><br>
+                    انه سنرحل ويبقى الأثر ويبقي الأجر الدائم والصدقة الجارية وما أجمل ان تكون الصدقة كتاب الله 😍</p>
+                    <p>بارك اللَّه فيكم وجعلها في ميزان حسناتكم وفي ميزان حسنات من يسمع او يشارك ما في القناة او الموقع ❤️</p>
+                    <div class="mt-6 p-4 bg-white rounded-lg inline-block shadow-sm border border-emerald-100">
+                        <a href="https://t.me/Quraan_9520" target="_blank" class="text-[#0088cc] font-bold hover:underline" dir="ltr">https://t.me/Quraan_9520</a>
+                        <p class="mt-2 text-sm text-gray-600">هذا هو لينك القناة فشاركوها 🥰</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-6 text-center text-gray-500 text-sm">
+        <p>صدقة جارية ❤️ | أجر دائم</p>
+    </footer>
+
+    <!-- برمجة الموقع -->
+    <script>
+        const reciterSearch = document.getElementById('reciterSearch');
+        const customDropdown = document.getElementById('customDropdown');
+        const moshafSelect = document.getElementById('moshafSelect');
+        const surahSelect = document.getElementById('surahSelect');
+        
+        const audioPlayer = document.getElementById('audioPlayer');
+        const statusMessage = document.getElementById('statusMessage');
+        const downloadSurahBtn = document.getElementById('downloadSurahBtn');
+        const downloadFullBtn = document.getElementById('downloadFullBtn');
+
+        const egyptRadioBtn = document.getElementById('egyptRadioBtn');
+        const egyptStreamUrl = "https://n0a.radiojar.com/8s5u5tpdtwzuv";
+
+        const surahNames = ["الفاتحة", "البقرة", "آل عمران", "النساء", "المائدة", "الأنعام", "الأعراف", "الأنفال", "التوبة", "يونس", "هود", "يوسف", "الرعد", "إبراهيم", "الحجر", "النحل", "الإسراء", "الكهف", "مريم", "طه", "الأنبياء", "الحج", "المؤمنون", "النور", "الفرقان", "الشعراء", "النمل", "القصص", "العنكبوت", "الروم", "لقمان", "السجدة", "الأحزاب", "سبأ", "فاطر", "يس", "الصافات", "ص", "الزمر", "غافر", "فصلت", "الشورى", "الزخرف", "الدخان", "الجاثية", "الأحقاف", "محمد", "الفتح", "الحجرات", "ق", "الذاريات", "الطور", "النجم", "القمر", "الرحمن", "الواقعة", "الحديد", "المجادلة", "الحشر", "الممتحنة", "الصف", "الجمعة", "المنافقون", "التغابن", "الطلاق", "التحريم", "الملك", "القلم", "الحاقة", "المعارج", "نوح", "الجن", "المزمل", "المدثر", "القيامة", "الإنسان", "المرسلات", "النبأ", "النازعات", "عبس", "التكوير", "الانفطار", "المطففين", "الانشقاق", "البروج", "الطارق", "الأعلى", "الغاشية", "الفجر", "البلد", "الشمس", "الليل", "الضحى", "الشرح", "التين", "العلق", "القدر", "البينة", "الزلزلة", "العاديات", "القارعة", "التكاثر", "العصر", "الهمزة", "الفيل", "قريش", "الماعون", "الكوثر", "الكافرون", "النصر", "المسد", "الإخلاص", "الفلق", "الناس"];
+
+        let allReciters = []; 
+        let currentReciter = null; 
+        let selectedMoshafData = null;
+        let currentAudioUrl = "";
+        let currentSurahNum = "";
+
+        async function init() {
+            try {
+                const recitersRes = await fetch('https://mp3quran.net/api/v3/reciters?language=ar');
+                const data = await recitersRes.json();
+                allReciters = data.reciters;
+                allReciters.sort((a, b) => a.name.localeCompare(b.name, 'ar'));
+            } catch (error) {
+                console.error("خطأ في جلب البيانات:", error);
+                reciterSearch.placeholder = "عذراً، حدث خطأ في تحميل البيانات.";
+                reciterSearch.disabled = true;
+            }
+        }
+
+        function renderDropdown(list) {
+            customDropdown.innerHTML = '';
+            if (list.length === 0) {
+                customDropdown.innerHTML = '<li class="p-4 text-gray-500 text-center">لا يوجد قارئ بهذا الاسم</li>';
+                customDropdown.classList.remove('hidden');
+                return;
+            }
+            list.forEach(reciter => {
+                const li = document.createElement('li');
+                li.className = 'p-3 hover:bg-emerald-50 cursor-pointer text-gray-800 font-medium border-b border-gray-50 transition-colors duration-150';
+                li.textContent = reciter.name;
+                li.addEventListener('click', () => selectReciter(reciter));
+                customDropdown.appendChild(li);
+            });
+            customDropdown.classList.remove('hidden');
+        }
+
+        reciterSearch.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const filteredReciters = allReciters.filter(r => r.name.toLowerCase().includes(searchTerm));
+            renderDropdown(filteredReciters);
+        });
+
+        reciterSearch.addEventListener('focus', function() {
+            if (allReciters.length > 0) {
+                const searchTerm = this.value.toLowerCase();
+                const filtered = searchTerm ? allReciters.filter(r => r.name.toLowerCase().includes(searchTerm)) : allReciters;
+                renderDropdown(filtered);
+            }
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!reciterSearch.contains(e.target) && !customDropdown.contains(e.target)) {
+                customDropdown.classList.add('hidden');
+            }
+        });
+
+        function selectReciter(reciter) {
+            reciterSearch.value = reciter.name;
+            currentReciter = reciter;
+            customDropdown.classList.add('hidden');
+
+            moshafSelect.innerHTML = '<option value="">اختر الرواية...</option>';
+            moshafSelect.disabled = true;
+            moshafSelect.classList.add('bg-gray-50', 'cursor-not-allowed');
+            moshafSelect.classList.remove('bg-white');
+            
+            surahSelect.innerHTML = '<option value="">أولاً، الرجاء اختيار الرواية</option>';
+            surahSelect.disabled = true;
+            surahSelect.classList.add('bg-gray-50', 'cursor-not-allowed');
+            surahSelect.classList.remove('bg-white');
+            
+            audioPlayer.pause();
+            statusMessage.textContent = "";
+            downloadSurahBtn.classList.add('hidden');
+            downloadSurahBtn.classList.remove('flex');
+            downloadFullBtn.classList.add('hidden');
+            downloadFullBtn.classList.remove('flex');
+
+            if (currentReciter && currentReciter.moshaf && currentReciter.moshaf.length > 0) {
+                currentReciter.moshaf.forEach((moshaf, index) => {
+                    const option = document.createElement('option');
+                    option.value = index;
+                    option.textContent = moshaf.name;
+                    moshafSelect.appendChild(option);
+                });
+                
+                moshafSelect.disabled = false;
+                moshafSelect.classList.remove('bg-gray-50', 'cursor-not-allowed');
+                moshafSelect.classList.add('bg-white');
+            }
+        }
+
+        moshafSelect.addEventListener('change', function(e) {
+            const moshafIndex = e.target.value;
+            
+            surahSelect.innerHTML = '<option value="">اختر السورة...</option>';
+            surahSelect.disabled = true;
+            surahSelect.classList.add('bg-gray-50', 'cursor-not-allowed');
+            surahSelect.classList.remove('bg-white');
+            
+            audioPlayer.pause();
+            statusMessage.textContent = "";
+            downloadSurahBtn.classList.add('hidden');
+            downloadSurahBtn.classList.remove('flex');
+            downloadFullBtn.classList.add('hidden');
+            downloadFullBtn.classList.remove('flex');
+
+            if (moshafIndex === "") return;
+
+            selectedMoshafData = currentReciter.moshaf[moshafIndex];
+            
+            downloadFullBtn.classList.remove('hidden');
+            downloadFullBtn.classList.add('flex');
+
+            const surahs = selectedMoshafData.surah_list.split(',');
+            surahs.forEach(surahNum => {
+                if(!surahNum) return; 
+                const option = document.createElement('option');
+                const paddedSurahNum = String(surahNum).padStart(3, '0');
+                
+                option.value = `${selectedMoshafData.server}${paddedSurahNum}.mp3`;
+                option.dataset.surahnum = surahNum;
+                option.textContent = `سورة ${surahNames[parseInt(surahNum) - 1]}`;
+                surahSelect.appendChild(option);
+            });
+
+            surahSelect.disabled = false;
+            surahSelect.classList.remove('bg-gray-50', 'cursor-not-allowed');
+            surahSelect.classList.add('bg-white');
+        });
+
+        surahSelect.addEventListener('change', function(e) {
+            currentAudioUrl = e.target.value;
+            if (currentAudioUrl) {
+                const selectedOption = surahSelect.options[surahSelect.selectedIndex];
+                currentSurahNum = selectedOption.dataset.surahnum;
+                
+                statusMessage.textContent = "جاري التشغيل...";
+                audioPlayer.src = currentAudioUrl;
+                
+                downloadSurahBtn.classList.remove('hidden');
+                downloadSurahBtn.classList.add('flex');
+
+                audioPlayer.play()
+                    .then(() => {
+                        const surahName = selectedOption.text;
+                        const moshafName = moshafSelect.options[moshafSelect.selectedIndex].text;
+                        statusMessage.textContent = `تستمع الآن إلى ${surahName} (${moshafName})`;
+                    })
+                    .catch(() => {
+                        statusMessage.textContent = "عذراً، حدث خطأ في تشغيل هذا الملف.";
+                    });
+            } else {
+                audioPlayer.pause();
+                statusMessage.textContent = "";
+                downloadSurahBtn.classList.add('hidden');
+                downloadSurahBtn.classList.remove('flex');
+            }
+        });
+
+        async function fetchAndDownload(url, filename) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Network error');
+                const blob = await response.blob();
+                const blobUrl = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = blobUrl;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(blobUrl);
+                a.remove();
+                return true;
+            } catch (error) {
+                console.error("Download error:", error);
+                return false;
+            }
+        }
+
+        downloadSurahBtn.addEventListener('click', async function() {
+            if (!currentAudioUrl || !currentSurahNum) return;
+            
+            downloadSurahBtn.disabled = true;
+            statusMessage.textContent = "⏳ جاري تحميل السورة مباشرة لجهازك، يرجى الانتظار...";
+            
+            const surahName = surahNames[parseInt(currentSurahNum) - 1];
+            const filename = `${currentSurahNum}_${surahName}_${currentReciter.name}.mp3`;
+            
+            const success = await fetchAndDownload(currentAudioUrl, filename);
+            
+            if (success) {
+                statusMessage.textContent = `✅ تم تحميل سورة ${surahName} بنجاح!`;
+            } else {
+                statusMessage.textContent = "❌ حدث خطأ أثناء التحميل. يرجى المحاولة لاحقاً.";
+            }
+            downloadSurahBtn.disabled = false;
+        });
+
+        downloadFullBtn.addEventListener('click', async function() {
+            if (!selectedMoshafData) return;
+
+            const surahs = selectedMoshafData.surah_list.split(',').filter(s => s);
+            if (surahs.length === 0) return;
+
+            downloadFullBtn.disabled = true;
+            downloadSurahBtn.disabled = true;
+
+            statusMessage.textContent = `⏳ جاري بدء تحميل المصحف (${surahs.length} سورة). الرجاء عدم إغلاق الصفحة...`;
+
+            for (let i = 0; i < surahs.length; i++) {
+                const surahNum = surahs[i];
+                const paddedSurahNum = String(surahNum).padStart(3, '0');
+                const fileUrl = `${selectedMoshafData.server}${paddedSurahNum}.mp3`;
+                const surahName = surahNames[parseInt(surahNum) - 1];
+                const filename = `${paddedSurahNum}_${surahName}_${currentReciter.name}.mp3`;
+                
+                statusMessage.textContent = `⏳ جاري تحميل: سورة ${surahName} (${i + 1} من ${surahs.length})...`;
+                
+                await fetchAndDownload(fileUrl, filename);
+            }
+
+            statusMessage.textContent = "✅ تم تحميل المصحف كاملاً بنجاح!";
+            downloadFullBtn.disabled = false;
+            downloadSurahBtn.disabled = false;
+        });
+
+        function playRadioStream(url, radioName) {
+            statusMessage.textContent = "جاري الاتصال بالبث المباشر...";
+            audioPlayer.src = url;
+            
+            downloadSurahBtn.classList.add('hidden');
+            downloadSurahBtn.classList.remove('flex');
+            downloadFullBtn.classList.add('hidden');
+            downloadFullBtn.classList.remove('flex');
+
+            audioPlayer.play()
+                .then(() => {
+                    statusMessage.textContent = `📻 تستمع الآن إلى البث المباشر: ${radioName}`;
+                })
+                .catch(() => {
+                    statusMessage.textContent = "عذراً، البث غير متاح حالياً أو هناك مشكلة في الاتصال.";
+                });
+        }
+
+        egyptRadioBtn.addEventListener('click', () => playRadioStream(egyptStreamUrl, "إذاعة القرآن الكريم من القاهرة"));
+
+        function setupPWA() {
+            const manifestJSON = {
+                "name": "أجر دائم | القرآن الكريم",
+                "short_name": "أجر دائم",
+                "start_url": window.location.href,
+                "display": "standalone",
+                "background_color": "#f4f6f5",
+                "theme_color": "#196b46",
+                "icons": [{
+                    "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23196b46'%3E%3Cpath d='M21 4H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm-1 13H7V6h13v11zM3 18H2V6a4 4 0 0 1 4-4h13v2H6a2 2 0 0 0-2 2v12z'/%3E%3C/svg%3E",
+                    "sizes": "512x512",
+                    "type": "image/svg+xml",
+                    "purpose": "any maskable"
+                }]
+            };
+            const manifestStr = JSON.stringify(manifestJSON);
+            const manifestUrl = 'data:application/manifest+json;charset=utf-8,' + encodeURIComponent(manifestStr);
+            document.head.insertAdjacentHTML('beforeend', `<link rel="manifest" href="${manifestUrl}">`);
+            document.head.insertAdjacentHTML('beforeend', `<meta name="theme-color" content="#196b46">`);
+
+            const swCode = `
+                self.addEventListener('install', (e) => { self.skipWaiting(); });
+                self.addEventListener('activate', (e) => { e.waitUntil(clients.claim()); });
+                self.addEventListener('fetch', (e) => { });
+            `;
+            const swBlob = new Blob([swCode], {type: 'application/javascript'});
+            const swUrl = URL.createObjectURL(swBlob);
+            
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register(swUrl).catch(err => console.log('PWA SW error:', err));
+            }
+
+            let deferredPrompt;
+            const installBtn = document.getElementById('installAppBtn');
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault(); 
+                deferredPrompt = e; 
+                installBtn.classList.remove('hidden'); 
+                installBtn.classList.add('flex');
+            });
+
+            installBtn.addEventListener('click', async () => {
+                if (deferredPrompt) {
+                    deferredPrompt.prompt(); 
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') {
+                        installBtn.classList.add('hidden');
+                        installBtn.classList.remove('flex');
+                    }
+                    deferredPrompt = null;
+                }
+            });
+        }
+
+        setupPWA();
+        init();
+    </script>
+</body>
+</html>
